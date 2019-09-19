@@ -6,23 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <title>52Projects.ch</title>
-</head>
-<body>
-    
-    <h1>Hallo <span style="color: #F6881F">52 </span>Projects</h1>
-    
-    <div id="dragSpace">
-        <div id="wrapperBoxes">
-            <div class="boxhome">Startseite</div>
-            <div class="box">Web Projects</div>
-            <div class="box">Print Projects</div>
-            <div class="box">Work</div>
-            <div class="box">About</div>
-            <div class="box">Contact</div>
-        </div>
-    </div>
-    
-    <script language="javascript" type="text/javascript">
+	
+	<script language="javascript" type="text/javascript">
          Draggable.create("#wrapperBoxes", {
 		bounds:"#dragSpace",
   //allowNativeTouchScrolling:false,
@@ -45,6 +30,24 @@ $(document).on("scroll", function (){
   console.log(pixels);
 })
     </script>
+	
+</head>
+<body>
+    
+    <h1>Hallo <span style="color: #F6881F">52 </span>Projects</h1>
+    
+    <div id="dragSpace">
+        <div id="wrapperBoxes">
+            <div class="boxhome">Startseite</div>
+            <div class="box">Web Projects</div>
+            <div class="box">Print Projects</div>
+            <div class="box">Work</div>
+            <div class="box">About</div>
+            <div class="box">Contact</div>
+        </div>
+    </div>
+    
+    
 
 </body>
 </html>
