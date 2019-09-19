@@ -2,3 +2,66 @@ h1 {
     font-size: 60px;
     text-align: center;
 }
+
+body{
+  font-family:sans-serif;
+  background:grey;
+  color:white;
+}
+
+h1 {
+  position:fixed;
+  margin: 10px 20px;
+}
+
+#dragSpace {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background-color:#f7f8f3;
+  left:-5000px;
+  margin-top:0px;
+}
+#wrapperBoxes{
+  position: absolute;
+  width: 5000px;
+  height: 100%;
+  left: 5000px;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  border-radius: 0px;
+  margin: 0px 10px;
+  background-color: #91e600;
+  text-align: center;
+  font-family: Asap, Avenir, Arial, sans-serif;
+  font-size: 40px;
+  font-weight:600;
+  line-height: 220px;
+  color: black;
+  float: left;
+}
+
+.boxhome {
+  position: relative;
+  width: 1620px;
+  height: 100%;
+  border-radius: 0px;
+  margin: 0px 10px;
+  background-color: #91e600;
+  text-align: center;
+  font-family: Asap, Avenir, Arial, sans-serif;
+  font-size: 40px;
+  font-weight:600;
+  line-height: 220px;
+  color: black;
+  float: left;
+}
+  
+
+label {
+  font-size:20px;
+}
