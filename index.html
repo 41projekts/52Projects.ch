@@ -1,106 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta lang="de-de">
-    <title>52 Projects</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
 
-    <style media="screen">
+    <title>52Projects.ch TEST2 LUCA</title>
+	
+	<script language="javascript" type="text/javascript">
+         Draggable.create("#wrapperBoxes", {
+		bounds:"#dragSpace",
+  //allowNativeTouchScrolling:false,
+		type:"x"
+		}
+)
 
-    body {
-      margin:0;
-      font-family:Georgia;
-      }
-      #container .box {
-      width:80vw;
-      height:100vh;
-      display:inline-block;
-      position:relative;
-      }
-      #container .box2 {
-      width:30vw;
-      height:100vh;
-      display:inline-block;
-      position:relative;
-      }
-      #container .box2 > div {
-      width:100px;
-      height:100px;
-      font-size:96px;
-      color:#FFF;
-      position:absolute;
-      top:50%;
-      left:50%;
-      margin:-50px 0 0 -50px;
-      line-height:.7;
-      font-weight:bold;
-      }
-      #container .box > div {
-      width:100px;
-      height:100px;
-      font-size:96px;
-      color:#FFF;
-      position:absolute;
-      top:50%;
-      left:50%;
-      margin:-50px 0 0 -50px;
-      line-height:.7;
-      font-weight:bold;
-      }
-      #container {
-      overflow-y:scroll;
-      overflow-x:hidden;
-      transform: rotate(270deg) translateX(-100%);
-      transform-origin: top left;
-      background-color:#999;
-      position:absolute;
-      width:100vh;
-      height:100vw;
-      }
-      #container2 {
-      transform: rotate(90deg) translateY(-100vh);
-      transform-origin: top left;
-      white-space:nowrap;
-      font-size:0;
-      }
+TweenMax.set("body", {overflowY:'scroll'});
 
-      .one {
-      background-color: #45CCFF;
-      }
-      .two {
-      background-color: #49E83E;
-      }
-      .three {
-      background-color: #EDDE05;
-      }
-      .four {
-      background-color: #E84B30;
-      }
+var scrollSpeed = 1.9; // half of user scroll
+var scrollHeight = 10000;
 
-    </style>
+TweenMax.set("body", {height:scrollHeight, overflowY:'scroll'});
 
-    <script type="text/javascript">
+$(document).on("scroll", function (){
+  const pixels = $(document).scrollTop();
+  TweenMax.to('#wrapperBoxes',1,{x:-0.8 * pixels})
+  
+  //  '0.5' = half speed of user scroll
+  console.log(pixels);
+})
     </script>
-
-  </head>
-  <body>
-    <div id="container">
-      <div id="container2">
-
-        <a href="webprojects.html">
-          <div class="box one"><div>1</div></div>
-        </a>
-        <a href="printprojects.html">
-          <div class="box2 two"><div>Web</div></div>
-        </a>
-        <a href="printprojects.html">
-          <div class="box2 three"><div>Print</div></div>
-        </a>
-        <a href="printprojects.html">
-          <div class="box2 four"><div>Kontakt</div></div>
-        </a>
-
-      </div>
+</head>
+<body>
+    
+    <h1>Hallo <span style="color: #F6881F">52 </span>Projects</h1>
+    
+    <div id="dragSpace">
+        <div id="wrapperBoxes">
+            <div class="boxhome">Startseiteeeeeeeee</div>
+            <div class="box">Web Projects</div>
+            <div class="box">Print Projects</div>
+            <div class="box">Work</div>
+            <div class="box">About</div>
+            <div class="box">Contact</div>
+        </div>
     </div>
-  </body>
+    
+    
+
+</body>
 </html>
